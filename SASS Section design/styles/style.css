@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  background-color: #333131;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+.navbar .navbar__logo {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .hambuger {
+  opacity: 0;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navbar .hambuger {
+    margin-right: 10px;
+    top: 26px;
+    right: 28px;
+    font-size: 24px;
+    color: #fff;
+    opacity: 1;
+    position: absolute;
+  }
+}
+.navbar .navbar__menu {
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.navbar .navbar__menu a {
+  color: #fff;
+  text-decoration: none;
+  list-style-type: none;
+}
+.navbar .navbar__menu .nav__menu__links:last-child {
+  background-color: #2ddb27;
+  padding: 6px;
+  border-radius: 5px;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navbar .navbar__menu {
+    opacity: 0;
+    cursor: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar .navbar__menu {
+    opacity: 0;
+    cursor: none;
+  }
+}
+
+.main__container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  height: 90vh;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.main__container .main__container__left {
+  line-height: 45px;
+}
+.main__container h1 {
+  color: #2ddb27;
+}
+.main__container h3 {
+  color: #2470e0;
+}
+.main__container button {
+  width: 5rem;
+  height: 2rem;
+  font-size: 14px;
+  background-color: #2ddb27;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.main__container button:hover {
+  background-color: #2470e0;
+  color: #fff;
+}
+.main__container .main__container__right img {
+  width: 450px;
+  height: auto;
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .main__container {
+    margin-top: 15px;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .main__container .main__container__left {
+    line-height: 30px;
+  }
+  .main__container .main__container__right img {
+    width: 300px;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

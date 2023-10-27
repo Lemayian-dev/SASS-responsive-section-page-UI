@@ -1,0 +1,160 @@
+@import 'navbar';
+@import 'colors';
+@import 'media-query';
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.navbar {
+    position: sticky;
+    background-color: #333131;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+
+    .navbar__logo {
+        color: #fff;
+        font-size: 2rem;
+        text-decoration: none;
+        cursor: pointer;
+        
+    }
+
+    
+    
+    .hambuger {
+        opacity: 0;
+    
+        @include tablet {
+            margin-right: 10px;
+            top: 26px;
+            right: 28px;
+            font-size: 24px;
+            color: $light;
+            opacity: 1;
+            position: absolute;
+        }
+    }
+    
+    
+    .navbar__menu {
+        width: 30vw;
+        display: flex;
+        justify-content: space-around;   
+
+        text-align: center;
+
+        a {
+            color: #fff;
+        text-decoration: none;
+        list-style-type: none;
+        }
+
+        .nav__menu__links:last-child {
+
+            background-color: $green;
+            padding: 6px;
+            border-radius: 5px;
+        }
+        
+        @include tablet {
+            opacity: 0;
+            cursor: none;
+        }
+        @include mobile {
+            opacity: 0;
+            cursor: none;
+        }
+
+       
+        
+    }
+} 
+
+
+// hero div
+
+.main__container {
+    background-color: $light;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .main__container__left {
+        line-height: 45px;
+
+        }
+    
+
+    h1 {
+        color: $green;
+    }
+
+    h3 {
+        color: $blue;
+    }
+    button {
+        width: 5rem;
+        height: 2rem;
+        font-size: 14px;
+        background-color: $green;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: $blue;
+        color: $light;
+    }
+
+
+    
+    .main__container__right img {
+        width: 450px;
+        height: auto;
+    }
+    @include tablet {
+        margin-top: 15px;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+
+        .main__container__left {
+            line-height: 30px;
+        }
+
+
+        .main__container__right img {
+            width: 300px;
+            height: auto;
+        }
+        }
+    }
+
+
+
+
+
+
+
+
